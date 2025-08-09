@@ -1,5 +1,7 @@
 package com.pm.patient_management.dto;
 
+import com.pm.patient_management.dto.validators.CreatePatientValiatorsGroup;
+
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -20,7 +22,7 @@ public class PatientRequestDTO {
     @NotBlank(message = "Date of birth cannot be blank")
     private String dateOfBirth;
 
-    @NotNull(message = "Register date cannot be null")
+    @NotBlank(groups = CreatePatientValiatorsGroup.class, message = "Register date cannot be blank")
     private String registerDate;
 
     // Getters and Setters
@@ -39,6 +41,8 @@ public class PatientRequestDTO {
     public void setEmail(String email) {
         this.email = email;
     }
+
+ 
     
     public String getAddress() {
         return address;
