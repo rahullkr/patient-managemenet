@@ -1,11 +1,11 @@
-PUT http://localhost:4000/patients/a73b45b5-6757-4584-bd1e-2a817ccd2268
+PUT http://localhost:4000/patients/8d494fca-e62a-433c-ae5a-a755817bc808
 Content-Type: application/json
 
 {
   "name": "rahul",
   "address": "123 Main St, Springfield",
-  "email": "fine@gmail.com",
- "dateOfBirth": "1990-01-01"
+  "email": "harry@gmail.com",
+  "dateOfBirth": "1990-01-01"
 
 
 }
